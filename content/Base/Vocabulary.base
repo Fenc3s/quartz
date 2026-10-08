@@ -1,0 +1,19 @@
+filters:
+  and:
+    - file.tags == ["#vocab"]
+views:
+  - type: table
+    name: Table
+    order:
+      - file.name
+      - meaning
+      - file.ctime
+      - tags
+      - links
+    sort:
+      - property: file.ctime
+        direction: DESC
+    columnSize:
+      file.name: 146
+      note.meaning: 252
+      note.tags: 120
